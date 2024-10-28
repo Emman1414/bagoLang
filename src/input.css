@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins overflow-x-hidden;
+  }
+  .container {
+    @apply max-w-[1600px] w-full px-4 mx-auto;
+  }
+  h1 {
+    @apply text-[70px];
+  }
+  h2 {
+    @apply text-[33px];
+  }
+  h3 {
+    @apply text-[24px];
+  }
+  h4 {
+    @apply text-[16px];
+  }
+  h5 {
+    @apply text-[12px];
+  }
+  h6 {
+    @apply text-[10px];
+  }
+  p {
+    @apply text-[16px];
+  }
+}
+
+@layer components {
+  /* HEADER */
+  .header__nav.open {
+    @apply right-0 z-20 overflow-y-hidden ;
+  }
+  .header__nav.open ul{
+    @apply right-0;
+  }
+
+  .toggle__menu {
+    @apply flex flex-col gap-1 z-50 md:hidden lg:hidden;
+  }
+  .toggle__menu span {
+    @apply content-[*] bg-primary h-2 w-10 rounded-lg duration-700 ease-out md:block;
+  }
+  .toggle__menu span:last-child {
+    @apply content-[*] bg-primary w-10 rounded-lg duration-700 ease-out;
+  }
+  .header__logo p {
+    @apply text-[30px];
+  }
+
+  .header__nav li {
+    @apply lg:w-[8rem] border-white border-b-2 px-5;
+  }
+
+  .header__nav li a {
+    @apply hover:text-primary lg:hover:border-white lg:hover:border-b-8 lg:pb-5 ;
+  }
+
+  /* TOGGLE MENU */
+
+  .toggle__menu.open span:first-child {
+    @apply origin-bottom-right rotate-[35deg] w-10 translate-x-[-0.3rem] translate-y-[1.2rem] transition-all opacity-[100];
+  }
+  .toggle__menu.open span:nth-child(2) {
+    @apply transition-all opacity-0;
+  }
+  .toggle__menu.open span:last-child {
+    @apply origin-top-right rotate-[-35deg] w-10 translate-x-[-0.3rem] translate-y-[-1.6rem] transition-all opacity-[100];
+  }
+
+  /* BANNER */
+  .banner__content p {
+    @apply text-[15px];
+  }
+  /* SERVICES */
+  .banner__services {
+    @apply absolute bottom-[0rem];
+  }
+  .service--text h2 {
+    @apply text-primary font-bold text-[20px];
+  }
+  .banner__services img {
+    @apply flex justify-center items-center -translate-y-[-3rem];
+  }
+  .banner__services p {
+    @apply pb-[2rem];
+  }
+}
+
+/* TOURS */
+
+.tours {
+  @apply bg-secondary text-white;
+}
+.tours__wrapper {
+  @apply flex flex-col gap-5 justify-center items-center;
+}
+.cards--details {
+  @apply text-center  flex flex-col -translate-y-[4rem];
+}
+
+.cards--details h3 {
+  @apply text-[20px];
+}
+
+/* TOUR CARDS */
+.cards {
+  @apply w-auto h-auto  relative;
+}
+.cards img {
+  @apply w-[20rem] object-cover;
+}
+
+/* FOOTER */
+
+.footer__logo p {
+  @apply text-[15px];
+}
+.socials {
+  @apply flex text-primary text-[30px] space-x-2;
+}
+
+.btn {
+  @apply bg-transparent text-white py-2 px-4 font-bold;
+}
+.btn.bg-primaryy {
+  @apply bg-primary text-black hover:bg-yellow-600 rounded-2xl;
+}
+.btn.bg-transparentt {
+  @apply bg-transparent  text-primary border border-primary hover:bg-primary rounded-2xl;
+}
+.btn.bg-transparentt2 {
+  @apply bg-transparent  text-white border border-primary hover:bg-primary rounded-2xl;
+}
+.btn.bg-non {
+  @apply bg-transparent text-primary cursor-pointer;
+}
